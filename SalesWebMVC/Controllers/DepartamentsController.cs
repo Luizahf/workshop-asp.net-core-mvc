@@ -72,7 +72,8 @@ namespace SalesWebMVC.Controllers
                 return NotFound();
             }
 
-            var departament = await _context.Departament.FindAsync(id);
+            var departament = await _context.Departament
+                .FindAsync(id);
             if (departament == null)
             {
                 return NotFound();
